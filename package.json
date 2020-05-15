@@ -1,28 +1,27 @@
 {
-  "_from": "vue-cal",
-  "_id": "vue-cal@1.35.1",
+  "_from": "vue-cal@^2.21.0",
+  "_id": "vue-cal@2.24.8",
   "_inBundle": false,
-  "_integrity": "sha512-v2Dsq4JiEB5bMUDcpSlIKQA+lE8K+86P4t5esGcwDD/sMDFZVDbTx5lhB6i80UqDWmYoqVsdWDtMOSfWH9GT3Q==",
+  "_integrity": "sha512-n2aSJlzAHhu1OHECysTzi4xKRA4Myc1cMUZF2zABWFfS0QvXOSQjhSfpgnCahmYYbJ7SFIdgi4fqqN+QKspECg==",
   "_location": "/vue-cal",
   "_phantomChildren": {},
   "_requested": {
-    "type": "tag",
+    "type": "range",
     "registry": true,
-    "raw": "vue-cal",
+    "raw": "vue-cal@^2.21.0",
     "name": "vue-cal",
     "escapedName": "vue-cal",
-    "rawSpec": "",
+    "rawSpec": "^2.21.0",
     "saveSpec": null,
-    "fetchSpec": "latest"
+    "fetchSpec": "^2.21.0"
   },
   "_requiredBy": [
-    "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/vue-cal/-/vue-cal-1.35.1.tgz",
-  "_shasum": "6491a9cc73a70c85fe59e704fccb610ec5fe78d6",
-  "_spec": "vue-cal",
-  "_where": "/c/Users/qbatt/dev/oracle-interns",
+  "_resolved": "https://registry.npmjs.org/vue-cal/-/vue-cal-2.24.8.tgz",
+  "_shasum": "6d12b593825f58977b2fcbdc410537a3c3acac44",
+  "_spec": "vue-cal@^2.21.0",
+  "_where": "/Users/qbattersby/dev/oracleinterns2020",
   "author": {
     "name": "Antoni Andre",
     "email": "antoniandre.web@gmail.com"
@@ -31,26 +30,34 @@
     "url": "https://github.com/antoniandre/vue-cal/issues"
   },
   "bundleDependencies": false,
-  "dependencies": {
-    "babel-polyfill": "^6.26.0"
-  },
+  "dependencies": {},
   "deprecated": false,
   "description": "A Vue JS full calendar, no dependency, no BS. :metal:",
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.3.0",
-    "@vue/cli-plugin-eslint": "^3.3.0",
-    "@vue/cli-service": "^3.3.1",
-    "@vue/eslint-config-standard": "^3.0.5",
-    "node-sass": "^4.11.0",
-    "pug": "^2.0.3",
+    "@vue/cli-plugin-babel": "^4.2.2",
+    "@vue/cli-plugin-eslint": "^4.2.2",
+    "@vue/cli-plugin-router": "^4.2.2",
+    "@vue/cli-service": "^4.2.2",
+    "@vue/eslint-config-standard": "^5.1.2",
+    "babel-eslint": "^10.0.3",
+    "core-js": "^3.6.4",
+    "eslint": "^6.8.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "eslint-plugin-vue": "^6.2.1",
+    "node-sass": "^4.13.1",
+    "pug": "^2.0.4",
     "pug-plain-loader": "^1.0.0",
-    "sass-loader": "^7.0.1",
-    "simple-syntax-highlighter": "^1.0.4",
-    "vue": "^2.5.22",
-    "vue-cli-plugin-vuetify": "^0.2.1",
-    "vue-scrollto": "^2.13.0",
-    "vue-template-compiler": "^2.5.22",
-    "vuetify": "^1.4.3"
+    "sass-loader": "^8.0.2",
+    "simple-syntax-highlighter": "^1.0.8",
+    "vue": "^2.6.11",
+    "vue-cli-plugin-vuetify": "^2.0.5",
+    "vue-router": "^3.1.5",
+    "vue-scrollto": "^2.17.1",
+    "vue-template-compiler": "^2.6.11",
+    "vuetify": "^2.2.14"
   },
   "files": [
     "dist",
@@ -77,8 +84,9 @@
     "build": "vue-cli-service build",
     "build-bundle": "vue-cli-service build --target lib --name vuecal ./src/components/vue-cal/index.vue --dest ./dist",
     "lint": "vue-cli-service lint",
+    "postbuild-bundle": "rm -rf ./dist/vuecal.common.i18n ./dist/vuecal.umd.i18n && mv ./dist/vuecal.umd.min.i18n ./dist/i18n",
     "serve": "vue-cli-service serve"
   },
   "unpkg": "dist/vuecal.umd.min.js",
-  "version": "1.35.1"
+  "version": "2.24.8"
 }
